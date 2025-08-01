@@ -18,4 +18,4 @@ connection.connect(err =>{
     console.info('Database connected')
 })
 
-module.export = connection
+module.exports = connection
