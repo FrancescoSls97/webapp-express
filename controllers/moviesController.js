@@ -35,7 +35,7 @@ function show(req, res) {
         }
         const movie = result[0]
 
-        const reviewsSql = 'SELECT movies.*, reviews.text FROM movies LEFT JOIN reviews ON movies.id = reviews.movie_id WHERE movies.id = ? '
+        const reviewsSql = 'SELECT reviews.id, reviews.name, reviews.text FROM movies LEFT JOIN reviews ON movies.id = reviews.movie_id WHERE movies.id = ? '
 
         connection.execute(reviewsSql,[id], (err, result) => {
             if (err) return res.status(500).json({
