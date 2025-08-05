@@ -6,6 +6,8 @@ const cors = require('cors')
 
 app.use(cors())
 
+app.use(express.json())
+
 app.use(express.static('public'))
 
 app.use('/api/movies', moviesRouter)
@@ -19,4 +21,3 @@ app.listen(PORT, ()=>{
 app.get('/', (req, res)=>{
     res.send('HEY LISTEN!! Welcome to the app')
 })
-
