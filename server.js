@@ -6,6 +6,8 @@ const cors = require('cors')
 
 app.use(cors())
 
+app.use(express.static('public'))
+
 app.use('/api/movies', moviesRouter)
 //importare asset statici e roter + gestione errori
 
